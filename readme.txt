@@ -1,39 +1,63 @@
 === Hide Links ===
-Contributors: egolacrima
+Contributors: egolacrima, wppuzzle
 Tags: link, hide link, links, noindex, comment author link
 Donate link: http://avovkdesign.com/bymecoffee
 Requires at least: 3.0
-Tested up to: 4.4
-Stable tag: 1.1
+Tested up to: 4.8
+Stable tag: 1.2
 License: GPLv2 or later 
 
-Скрытие внешних ссылок от индексации поисковыми системами с помощью скрипта. 
+Closure of external links from indexing using jQuery script.
 
 == Description ==
 
-Cкрывает внешние ссылки от индексации поисковыми системами с помощью метода, основанного на использовании jQuery скрипта и маскирования ссылок ([подробнее о методе](http://avovkdesign.com/kak-spryatat-ssylku-ot-indeksacii.html "Как спрятать ссылку от индексации"))
+Hides external links from indexing by search engines using a jQuery masking links script([more about the method in] (http://avovkdesign.com/kak-spryatat-ssylku-ot-indeksacii.html "How to hide the link from Indexation"))
 
-Добавляет специальный шоткод `[link]`, c помощоью которого можно скрыть  внешнюю ссылку в тексте статьи.
-Также автоматически скрывает все сcылки авторов комментариев (внешние ссылки в тексте комментария не закрываются).
+FEATURES:
+* One click on editor button help to hide external links in search engine index
+* Automatically disallows indexing of all commenter's links.
+* Simple shortcode [link][/link] easily hides any links in widgets or comments texts.
 
 
-= Использование шоткода: =
+= USAGE =
 
-1. В тексте статьи добавьте шоткод с текстом будущей ссылки: 
-`[link]анкор ссылки[/link]`
-1. Выделите текст будущей ссылки (в примере -*анкор ссылки*) и с помощью кнопки *Добавить ссылку* (в визуальном редакторе) установите ссылку, как делаете это обычно.
-1. Сохраните страницу
+1. In text editor place cursor on link
+1. Click on HideLinks button to add shortcode before and after link. Sample:
+`[link]external link[/link]`
 
-= Проверка работы =
-1. Заходим в исходный код страницы (Crtl+U на клавиатуре или правой кнопкой мыши на пустом месте и выбираем пункт *Просмотр кода страницы* или *Просмотр исходного кода*).
-1. Нажимаем на клавиатуре Ctrl+F и вводим в поиск фразу *data-link* и нажимаем Enter.
-1. При включенном плагине ссылки авторов комментариев или ссылки, завключенные в тег `[link]` будут выглядеть в исходном коде примерно так:
-<code><span data-link="http://mylink.com" data-target="_blank" title="Тайтл" class="link">анкор ссылки</span></code>
-вместо стандартного написания ссылки:
-<code><a href="http://mylink.com" target="_blank" title="Тайтл" class="">анкор ссылки</a></code>
 
+= TESTING =
+
+After installing and activating plugin, hidden links look like ordinary ones. This moment can mislead and complicate work of plugin.
+
+You can check whether plugin works correctly in two ways.
+1. On page, where there are hidden link or user comments, press keyboard shortcuts Ctrl + U — new tab with source code opens.
+1. Now press Ctrl + F on keyboard — field for text searching appears. Enter phrase in it data-link and press Enter on your keyboard.
+1. Browser found in source code all matches with necessary phrase (it is present in hidden link). In search box to the right of entered phrase, inscription with number of found matches appears (i.e. hidden links), and near — arrows for transition to previous and next found fragment.
+1. If in found fragment after phrase data-link goes link address you have hidden (or site address commentator) — it means that plugin hides link. Sample:
+<code><span data-link="http://mylink.com" data-target="_blank" title="Title" class="link">anchor</span></code>
+not like this:
+<code><a href="http://mylink.com" target="_blank" title="Title" class="">anchor</a></code>
+
+
+= PRO Features =
+
+[HideLinks Pro](https://wp-puzzle.com/hide-links/) allow:
+
+1. Automatically hide all external links in post content
+2. Control script including (inline or file)
+
+= Extra =
+* Documentation [https://wp-puzzle.com/docs/ru/hide-links](https://wp-puzzle.com/docs/ru/hide-links)
+* GitHub repository for issues and merge request [https://github.com/wppuzzle/hidelinks](https://github.com/wppuzzle/hidelinks)
+* Support & bug report [https://wp-puzzle.com/our-support/](https://wp-puzzle.com/our-support/)
 
 == Frequently Asked Questions ==
+
+**Why hidden links are displayed as ordinary text?**
+There are script errors on site and because of them code link substitution doesn’t work
+In this case, you can try to disable all plugins except HideLinks and again check links – if on site page they have become clickable, then it means that error in scripts is caused by one of plugins. Try to activate plugins one by one, checking each time whether hidden link becomes ordinary text on page
+If there is still a problem after deactivating plugins, it means that error can be caused by scripts from theme. In this case, you will need help of professional. In order to make sure that problem is in script error – you can contact technical support specifying site address.
 
 **Зачем закрывать ссылки от индексации?**
 Главная причина сокрытия ссылочной массы с сайта – это утечка веса.
@@ -43,41 +67,47 @@ Cкрывает внешние ссылки от индексации поиск
 
 == Installation ==
 
-= Автоматическая установка: =
+= From your WordPress dashboard =
+1. Visit *Plugins* &larr; *Add new*
+1. Search for `Hide Links` and click *Install* button on HideLinks plugin
+1. Activate HideLinks from your *Plugins* page.
+1. Visit *Posts* &larr; *Add new* and find new button at visual editor
 
-1. В консоли перейти в меню *Плагины* &larr; *Добавить новый*.
-1. Выбрать пункт *Загрузить* и указать расположение архива hidelinks.zip, затем нажать кнопку *Установить*.
-1. После завершения установки выбрать *Активировать плагин*.
 
+= From WordPress.org =
+1. Download and unzip `hidelinks.zip`
+1. Upload the `hidelinks` directory to your `/wp-content/plugins/` directory, using your favorite method (ftp, sftp, scp, etc…)
+1. Activate HideLinks from your Plugins page.
+1. Visit *Posts* &larr; *Add new* and find new button at visual editor
 
-= Ручная установка =
-1. Распаковать архив hidelinks.zip.
-1. Загрузить каталог в папку /wp-content/plugins/ вашего сайта через FTP или файловый менеджер на хостинге.
-1. Активировать плагин через меню *Плагины* в консоли WordPress.
+== Screenshots ==
 
+1. HideLinks button in visual editor
 
 == Changelog ==
 
+= 1.2 =
+* Tested up to WordPress 4.8
+* Fix: problem with shortcode setup, when link is in begin or end of paragraph
+* Add: do shortcodes in link text
+
 = 1.1 =
-*	Новая возможность: кнопка визуального редактора - всего лишь один клик, чтобы добавить или удалить шорткод вокруг ссылки
+* Added: visual editor button with which you can easily add or remove shortcode around link.
 
 = 1.0.4 =
-*	Добавлен безопасный комментарий для скрипта (внтури script)
-*	Добавлена замена ссылки комментатора, которая выводится через get_comment_author_url_link
+* Added: secure comment for script (in script)
+* Added: commentator’s link replacement  which is displayed via get_comment_author_url_link
 
 = 1.0.3 =
-*   В скрипте замены добавлено сохранение атрибута class для ссылки при его наличии
-
+* Added: saving class attribute in script replacement, if there is any, for link
 
 = 1.0.2 =
-*   Исправлена ошибка с утановкой класса для ссылки автора комментария
-
+* Fixed: error with class setting for link of author’s comment
 
 = 1.0.1 =
-*   Исправлена критическая ошибка с утановкой класса для тега span с картинкой внутри
-*   В тексте комментария и втекстовом виджете теперь можно использовать шоткод `[link][/link]` для закрытия ссылок, добавив его вокруг html-кода стандартной гиперссылки
-
-
+* Fixed: fatal error with setting class for tag span with picture inside
+* Now in comment text and text widget you can use shortcode [link][/link] to close links, adding it around html – code of standard hyperlink
 
 = 1.0 =
-*   Релиз
+* Release
+

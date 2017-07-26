@@ -1,9 +1,14 @@
 <?php
 
 
-
+/**
+ * Class WPPZ_HideLinks
+ */
 class WPPZ_HideLinks {
 
+	/**
+	 * WPPZ_HideLinks constructor.
+	 */
 	function __construct() {
 
 	}
@@ -50,18 +55,20 @@ class WPPZ_HideLinks {
 		return str_replace( $s, $r, $link );
 
 	}
-	
-	
+
+
 	/**
 	 * Replace link in [link] shorcode
 	 *
-	 * @param string $attr 	  Optional. Shortcode attributes not uses.
+	 * @param string $attr Optional. Shortcode attributes not uses.
 	 * @param string $content HTML link for replace (text in shorcode).
 	 *                        Default null.
+	 *
+	 * @return mixed
 	 */
 	public static function hidelinks_shortcode_link( $atts , $content = null ) {
 		
-		$new = self::linkreplace( $content );
+		$new = self::linkreplace( do_shortcode( $content ) );
 		
 		$s = array( 'rel=', 'target=' );
 		$r = array( 'data-rel=', 'data-target=' );
@@ -69,14 +76,14 @@ class WPPZ_HideLinks {
 		return str_replace( $s, $r, $new );
 		
 	}
-	
-	
-	
+
+
 	/**
 	 * Replace link in comment author links
 	 *
-	 * @param string $link  HTML link in comments loop.
-	 *                      
+	 * @param string $link HTML link in comments loop.
+	 *
+	 * @return mixed
 	 */
 	public static function hidelinks_comment_author_link( $link ){
 		

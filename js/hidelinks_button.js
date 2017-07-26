@@ -1,69 +1,73 @@
-(function() {
-    tinymce.PluginManager.add('hidelinks_button', function( editor, url ) {
-        
+(function () {
+    tinymce.PluginManager.add('hidelinks_button', function (editor, url) {
+
         var myButton = null;
 
-        editor.addButton( 'hidelinks_button', {
-            title: 'Установите курсор на ссылку в редакторе и нажмите кнопку, чтобы закрыть от индексации гиперссылку',
+        editor.addButton('hidelinks_button', {
+            title: hidelinks.title_text,
             icon: 'mce-hidelinks',
             image: url + '/hidelinks.gif',
             disabledStateSelector: ':not(a)',
 
-            onPostRender: function() { myButton = this; },  
+            onPostRender: function () {
+                myButton = this;
+            },
 
-            onclick: function() {
-                var node = editor.selection.getNode(),                
-                    startTagText = document.createTextNode("[link]");   
+            onclick: function () {
+                var node = editor.selection.getNode(),
+                    startTagText = document.createTextNode("[link]"),
                     endTagText = document.createTextNode("[/link]"),
-                    prev = node.previousSibling,
-                    next = node.nextSibling,
-                    prev_text = prev.textContent,
-                    next_text = next.textContent,
                     state = true;
 
-                if ( -1 != next_text.search('\[\/link\]') && -1 != prev_text.search('\[link\]') ) {
+                if (node.previousSibling && node.nextSibling) {
 
-                    startTagText = document.createTextNode( prev_text.replace( '\[link\]', '') );   
-                    endTagText = document.createTextNode( next_text.replace( '\[\/link\]', '') ); 
+                    var prev = node.previousSibling,
+                        next = node.nextSibling,
+                        prev_text = prev.textContent || '',
+                        next_text = next.textContent || '';
 
-                    node.parentNode.removeChild( prev );
-                    node.parentNode.removeChild( next );
+                    if (-1 !== next_text.search('\[\/link\]') && -1 !== prev_text.search('\[link\]')) {
 
-                    state = false;
+                        startTagText = document.createTextNode(prev_text.replace('\[link\]', ''));
+                        endTagText = document.createTextNode(next_text.replace('\[\/link\]', ''));
 
-                } else {
-                    // this.active(false);
+                        node.parentNode.removeChild(prev);
+                        node.parentNode.removeChild(next);
+
+                        state = false;
+
+                    }
                 }
 
-                node.parentNode.insertBefore( startTagText, node ); 
-                node.parentNode.insertBefore( endTagText, node.nextSibling );
-                this.active( state );
+                node.parentNode.insertBefore(startTagText, node);
+                node.parentNode.insertBefore(endTagText, node.nextSibling);
+                this.active(state);
             }
         });
-        
-        editor.on('NodeChange', function(event) {
-            if(myButton) {
+
+        editor.on('NodeChange', function (event) {
+            if (myButton) {
                 myButton.disabled(!(event.element.nodeName == 'A'));
-                
+
                 var node = editor.selection.getNode();
-                if ( node ) {
+                if (node) {
 
                     var prev = node.previousSibling,
                         next = node.nextSibling,
                         state = false;
 
-                    if(node && prev && next) {
-                        if ( -1 != next.textContent.search('\[\/link\]') && -1 != prev.textContent.search('\[link\]') ) {
+                    if (node && prev && next) {
+                        if (-1 != next.textContent.search('\[\/link\]') && -1 != prev.textContent.search('\[link\]')) {
                             state = true;
                         }
                     }
 
                 }
-                myButton.active( state );
+                myButton.active(state);
 
             }
         });
 
-            
+
     });
 })();
