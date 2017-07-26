@@ -90,6 +90,7 @@ If there is still a problem after deactivating plugins, it means that error can 
 * Tested up to WordPress 4.8
 * Fix: problem with shortcode setup, when link is in begin or end of paragraph
 * Add: do shortcodes in link text
+* Add: Localization
 
 = 1.1 =
 * Added: visual editor button with which you can easily add or remove shortcode around link.

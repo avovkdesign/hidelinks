@@ -25,7 +25,9 @@ class WPPZ_HideLinks_Button {
 		if ( 'true' == get_user_option( 'rich_editing' ) ) {
 			add_filter( 'mce_buttons', array( 'WPPZ_HideLinks_Button', 'hidelinksadmin_register_mce_button' ) );
 			add_filter( 'mce_external_plugins', array( 'WPPZ_HideLinks_Button', 'hidelinksadmin_add_tinymce_plugin' ) );
-			add_action( 'wp_enqueue_scripts', 'localize_button_scripts' ); //back end
+
+			add_action( "admin_head-post.php", array( 'WPPZ_HideLinks_Button', 'localize_button_scripts' ) );
+			add_action( "admin_head-post-new.php", array( 'WPPZ_HideLinks_Button', 'localize_button_scripts' ) );
 		}
 
 	}
@@ -57,14 +59,14 @@ class WPPZ_HideLinks_Button {
 
 	/**
 	 *
-	 * @param $hook_suffix
 	 */
-	public static function localize_button_scripts( $hook_suffix ) {
+	public static function localize_button_scripts() {
 
-		wp_localize_script( 'jquery', 'hidelinks', array(
-			'title_text' => __( 'Place the cursor on the link in the editor and click the button to close the indexing of the hyperlink', 'hidelinks' )
-
-		) );
+		?>
+        <script type='text/javascript'>
+            var hidelinks = {'title_text': '<?php _e( 'Place the cursor on the link in the editor and click the button to close the indexing of the hyperlink', 'hidelinks' ) ?>'};
+        </script>
+		<?php
 
 	}
 
