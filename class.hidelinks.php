@@ -110,7 +110,7 @@ jQuery(document).ready(function($){
             target = ( null != $(this).attr('data-target') ) ? ' target="' + $(this).attr('data-target') + '"' : ' target="_blank"',
             title = ( null != $(this).attr('title') ) ? ' title="' + $(this).attr('title') + '"' : '',         
             style = ( null != $(this).attr('style') ) ? ' style="' + $(this).attr('style') + '"' : '',         
-            rel = ( null != $(this).attr('data-rel') ) ? ' rel="' + $(this).attr('data-rel') + '"' : '',
+            rel = ( null != $(this).attr('data-rel') ) ? ' rel="' + $(this).attr('data-rel') + '"' : ' rel="noopener"',
             cl = ( null != $(this).attr('class') ) ? $(this).attr('class').replace('link','').trim() : '';
 		cl = ( '' != cl ) ? ' class="' + cl + '"' : '';
 		return '<a href="' + $(this).attr('data-link') + '" ' + title + id + cl + target + style + rel + ' >' + $(this).html() + '</a>';

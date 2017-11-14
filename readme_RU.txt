@@ -3,8 +3,8 @@ Contributors: egolacrima, wppuzzle
 Tags: link, hide link, links, noindex, comment author link
 Donate link: http://avovkdesign.com/bymecoffee
 Requires at least: 3.0
-Tested up to: 4.8
-Stable tag: 1.2
+Tested up to: 4.9
+Stable tag: 1.3
 License: GPLv2 or later 
 
 Скрытие внешних ссылок от индексации поисковыми системами с помощью скрипта. 
@@ -57,6 +57,10 @@ Cкрывает внешние ссылки от индексации поиск
 
 
 == Changelog ==
+
+= 1.3 =
+*	Совместимость с WordPress 4.9
+*   добавление `rel="noopener"` по-умолчанию (может быть перезаписано установкой атрибута `rel` в нужное значение
 
 = 1.2 =
 *	Совместимость с WordPress 4.8

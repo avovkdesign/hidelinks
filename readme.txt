@@ -3,8 +3,8 @@ Contributors: egolacrima, wppuzzle
 Tags: link, hide link, links, noindex, comment author link
 Donate link: http://avovkdesign.com/bymecoffee
 Requires at least: 3.0
-Tested up to: 4.8
-Stable tag: 1.2
+Tested up to: 4.9
+Stable tag: 1.3
 License: GPLv2 or later 
 
 Closure of external links from indexing using jQuery script.
@@ -91,6 +91,10 @@ If there is still a problem after deactivating plugins, it means that error can 
 1. HideLinks button in visual editor
 
 == Changelog ==
+
+= 1.3 =
+* Tested up to WordPress 4.9
+* add: `rel=noopener` by default
 
 = 1.2 =
 * Tested up to WordPress 4.8

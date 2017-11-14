@@ -3,7 +3,7 @@
  *  Plugin Name: Hide Links
  *   Plugin URI: http://wp-puzzle.com/hide-links/
  *  Description: Скрытие внешних ссылок сайта от индексации с помощью jQuery. Автоматически скрывает все авторские ссылки комментаторов. Кнопка в визуальном редакторе, шорткод [link] и замена всех ссылок, написанных в требуемом формате.
- *      Version: 1.2
+ *      Version: 1.3
  *       Author: Alexandra Vovk
  *   Author URI: http://wp-puzzle.com/
  *      License: GPLv2 or later

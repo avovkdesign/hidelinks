@@ -3,8 +3,8 @@
 **Tags:** link, hide link, links, noindex, comment author link  
 **Donate link:** http://avovkdesign.com/bymecoffee  
 **Requires at least:** 3.0  
-**Tested up to:** 4.8  
-**Stable tag:** 1.2  
+**Tested up to:** 4.9  
+**Stable tag:** 1.3  
 **License:** GPLv2 or later   
 
 Closure of external links from indexing using jQuery script.
@@ -27,6 +27,13 @@ FEATURES:
 1. Click on HideLinks button to add shortcode before and after link. Sample: `[link]external link[/link]`
 
 
+### HideLinks PRO Features: 
+
+1. **Automatically** hide **all external links** in post content
+2. Control script including (inline or file)
+
+You can find out more about this here: [https://wp-puzzle.com/hide-links/](https://wp-puzzle.com/hide-links/)
+
 
 ### TESTING 
 
@@ -37,19 +44,13 @@ You can check whether plugin works correctly in two ways.
 1. On page, where there are hidden link or user comments, press keyboard shortcuts Ctrl+U — new tab with source code opens.
 1. Now press Ctrl+F on keyboard — field for text searching appears. Enter phrase in it data-link and press Enter on your keyboard.
 1. Browser found in source code all matches with necessary phrase (it is present in hidden link). In search box to the right of entered phrase, inscription with number of found matches appears (i.e. hidden links), and near — arrows for transition to previous and next found fragment.
-1. If in found fragment after phrase data-link goes link address you have hidden (or site address commentator) — it means that plugin hides link. Sample:
-`<span data-link="http://mylink.com" data-target="_blank" title="Title" class="link">anchor</span>`
-not like this:
-`<a href="http://mylink.com" target="_blank" title="Title" class="">anchor</a>`
-
-
-
-### PRO Features 
-
-[HideLinks Pro](https://wp-puzzle.com/hide-links/) allow:
-
-1. Automatically hide all external links in post content
-2. Control script including (inline or file)
+1. If in found fragment after phrase data-link goes link address you have hidden (or site address commentator) — it means that plugin hides link. Sample: 
+	
+	`<span data-link="http://mylink.com" data-target="_blank" title="Title" class="link">anchor</span>` 
+	
+	not like this: 
+	
+	```<a href="http://mylink.com" target="_blank" title="Title" class="">anchor</a>```
 
 
 ### Extra 
@@ -100,6 +101,10 @@ If there is still a problem after deactivating plugins, it means that error can 
 
 
 ## Changelog 
+
+### 1.3
+* Tested up to WordPress 4.9
+* add: `rel=noopener` by default
 
 
 ### 1.2 
