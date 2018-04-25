@@ -20,7 +20,6 @@ FEATURES:
 * Simple shortcode [link][/link] easily hides any links in widgets or comments texts.
 
 
-
 ### USAGE 
 
 1. In text editor place cursor on link
@@ -70,11 +69,10 @@ If there is still a problem after deactivating plugins, it means that error can 
 Главная причина сокрытия ссылочной массы с сайта – это утечка веса.
 
 **Почему бы просто не использовать `rel="nofollow"` для Google и `<noindex></noindex>` для Яндекс?**
-Тег noindex (Яндекс) и атрибут nofollow (Google) не прячут ссылки от поисковиков, а только рекомендуют поисковым роботам не индексировать ссылки. Решение о индексации и учете этих ссылок принимается поиковой системой.
+Тег noindex (Яндекс) и атрибут nofollow (Google) не прячут ссылки от поисковиков, а только рекомендуют поисковым роботам не индексировать ссылки. Решение о индексации и учете этих ссылок принимается поисковой системой.
 
 
 ## Installation 
-
 
 ### From your WordPress dashboard 
 
@@ -82,8 +80,6 @@ If there is still a problem after deactivating plugins, it means that error can 
 1. Search for `Hide Links` and click *Install* button on HideLinks plugin
 1. Activate HideLinks from your *Plugins* page.
 1. Visit *Posts* &larr; *Add new* and find new button at visual editor
-
-
 
 ### From WordPress.org 
 
@@ -99,13 +95,11 @@ If there is still a problem after deactivating plugins, it means that error can 
 [missing image]
 
 
-
 ## Changelog 
 
 ### 1.3
 * Tested up to WordPress 4.9
 * add: `rel=noopener` by default
-
 
 ### 1.2 
 * Tested up to WordPress 4.8
@@ -113,29 +107,22 @@ If there is still a problem after deactivating plugins, it means that error can 
 * Add: do shortcodes in link text
 * Add: Localization
 
-
 ### 1.1 
 * Added: visual editor button with which you can easily add or remove shortcode around link.
-
 
 ### 1.0.4 
 * Added: secure comment for script (in script)
 * Added: commentator’s link replacement  which is displayed via get_comment_author_url_link
 
-
 ### 1.0.3 
 * Added: saving class attribute in script replacement, if there is any, for link
 
-
 ### 1.0.2 
 * Fixed: error with class setting for link of author’s comment
-
 
 ### 1.0.1 
 * Fixed: fatal error with setting class for tag span with picture inside
 * Now in comment text and text widget you can use shortcode [link][/link] to close links, adding it around html – code of standard hyperlink
 
-
 ### 1.0 
 * Release
-
