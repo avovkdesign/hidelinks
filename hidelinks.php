@@ -3,16 +3,17 @@
  *  Plugin Name: Hide Links
  *   Plugin URI: http://wp-puzzle.com/hide-links/
  *  Description: Magically hides external links from indexing by search engines. Automatically hides all comment authors links. Adds shortcode for easy hiding links in posts, pages or widgets content.
- *      Version: 1.4
+ *      Version: 1.4.1
  *       Author: Alexandra Vovk
  *   Author URI: http://wp-puzzle.com/
  *      License: GPLv2 or later
- *  Text Domain: hidelinks
+ *  Text Domain: hide-links
+ *  Domain Path: /languages
  * ========================================================================== */
 
 
-__( 'Hide Links', 'hidelinks' );
-__( 'Magically hides external links from indexing by search engines. Automatically hides all comment authors links. Adds shortcode for easy hiding links in posts, pages or widgets content.', 'hidelinks' );
+__( 'Hide Links', 'hide-links' );
+__( 'Magically hides external links from indexing by search engines. Automatically hides all comment authors links. Adds shortcode for easy hiding links in posts, pages or widgets content.', 'hide-links' );
 
 $plugin_dir = plugin_dir_path( __FILE__ );
 $declared = get_declared_classes();

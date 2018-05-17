@@ -64,7 +64,7 @@ class WPPZ_HideLinks_Button {
 
 		?>
         <script type='text/javascript'>
-            var hidelinks = {'title_text': '<?php _e( 'Place the cursor on the link in the editor and click the button to close the indexing of the hyperlink', 'hidelinks' ) ?>'};
+            var hidelinks = {'title_text': '<?php _e( 'Place the cursor on the link in the editor and click the button to close the indexing of the hyperlink', 'hide-links' ) ?>'};
         </script>
 		<?php
 
