@@ -1,10 +1,10 @@
 === Hide Links ===
 Contributors: egolacrima, wppuzzle
-Tags: link, hide link, links, noindex, comment author link
+Tags: link, links, noindex, nofollow, external links, seo, hide links, comment author link
 Donate link: http://avovkdesign.com/bymecoffee
 Requires at least: 3.0
-Tested up to: 4.9
-Stable tag: 1.3
+Tested up to: 4.9.6
+Stable tag: 1.4
 License: GPLv2 or later 
 
 Скрытие внешних ссылок от индексации поисковыми системами с помощью скрипта. 
@@ -39,7 +39,7 @@ Cкрывает внешние ссылки от индексации поиск
 Главная причина сокрытия ссылочной массы с сайта – это утечка веса.
 
 **Почему бы просто не использовать `rel="nofollow"` для Google и `<noindex></noindex>` для Яндекс?**
-Тег noindex (Яндекс) и атрибут nofollow (Google) не прячут ссылки от поисковиков, а только рекомендуют поисковым роботам не индексировать ссылки. Решение о индексации и учете этих ссылок принимается поиковой системой.
+Тег noindex (Яндекс) и атрибут nofollow (Google) не прячут ссылки от поисковиков, а только рекомендуют поисковым роботам не индексировать ссылки. Решение о индексации и учете этих ссылок принимается поисковой системой.
 
 == Installation ==
 
@@ -57,6 +57,10 @@ Cкрывает внешние ссылки от индексации поиск
 
 
 == Changelog ==
+
+= 1.4 =
+*	Совместимость с WordPress 4.9.6
+*	обновлены переводы
 
 = 1.3 =
 *	Совместимость с WordPress 4.9
