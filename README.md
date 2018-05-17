@@ -4,7 +4,7 @@
 **Donate link:** http://avovkdesign.com/bymecoffee  
 **Requires at least:** 3.0
 **Tested up to:** 4.9.6
-**Stable tag:** 1.4.1
+**Stable tag:** 1.4.2
 **License:** GPLv2 or later   
 
 Closure of external links from indexing using jQuery script.
@@ -101,6 +101,9 @@ If there is still a problem after deactivating plugins, it means that error can 
 
 
 ## Changelog 
+
+### 1.4.2
+* rename translation files
 
 ### 1.4.1
 * translation domain fix

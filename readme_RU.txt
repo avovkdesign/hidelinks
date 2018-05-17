@@ -4,7 +4,7 @@ Tags: link, links, noindex, nofollow, external links, seo, hide links, comment a
 Donate link: http://avovkdesign.com/bymecoffee
 Requires at least: 3.0
 Tested up to: 4.9.6
-Stable tag: 1.4.1
+Stable tag: 1.4.2
 License: GPLv2 or later 
 
 Скрытие внешних ссылок от индексации поисковыми системами с помощью скрипта. 
@@ -57,6 +57,9 @@ Cкрывает внешние ссылки от индексации поиск
 
 
 == Changelog ==
+
+= 1.4.2 =
+* переименованы файлы перевода
 
 = 1.4.1 =
 *	исправлено наименование текстового домена для преводов
