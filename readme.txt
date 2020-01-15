@@ -9,9 +9,11 @@ License: GPLv2 or later
 
 Closure of external links from indexing using jQuery script.
 
+
 == Description ==
 
 Hides external links from indexing by search engines using a jQuery masking links script ( [more about the method in](http://avovkdesign.com/kak-spryatat-ssylku-ot-indeksacii.html) )
+
 
 = FEATURES: =
 
@@ -37,7 +39,6 @@ You can check whether plugin works correctly in two ways.
 1. Browser found in source code all matches with necessary phrase (it is present in hidden link). In search box to the right of entered phrase, inscription with number of found matches appears (i.e. hidden links), and near — arrows for transition to previous and next found fragment.
 1. If in found fragment after phrase data-link goes link address you have hidden (or site address commentator) — it means that plugin hides link.
 
-
 Sample: `<span data-link="http://mylink.com" data-target="_blank" title="Title" class="link">anchor</span>` not like this: `<a href="http://mylink.com" target="_blank" title="Title" class="">anchor</a>`
 
 
@@ -48,10 +49,12 @@ Sample: `<span data-link="http://mylink.com" data-target="_blank" title="Title" 
 1. Automatically hide all external links in post content
 2. Control script including (inline or file)
 
+
 = Extra =
 
 * [Documentation](https://wp-puzzle.com/docs/ru/hide-links)
 * [GitHub repository](https://github.com/wppuzzle/hidelinks) for issues and merge request
+
 
 == Frequently Asked Questions ==
 
@@ -67,7 +70,8 @@ If there is still a problem after deactivating plugins, it means that error can 
 Главная причина сокрытия ссылочной массы с сайта – это утечка веса.
 
 **Почему бы просто не использовать `rel="nofollow"` для Google и `<noindex></noindex>` для Яндекс?**
-Тег noindex (Яндекс) и атрибут nofollow (Google) не прячут ссылки от поисковиков, а только рекомендуют поисковым роботам не индексировать ссылки. Решение о индексации и учете этих ссылок принимается поиковой системой.
+Тег noindex (Яндекс) и атрибут nofollow (Google) не прячут ссылки от поисковиков, а только рекомендуют поисковым роботам не индексировать ссылки. Решение о индексации и учете этих ссылок принимается поисковой системой.
+
 
 == Installation ==
 
@@ -78,7 +82,6 @@ If there is still a problem after deactivating plugins, it means that error can 
 1. Activate HideLinks from your *Plugins* page.
 1. Visit *Posts* &rarr; *Add new* and find new button at visual editor
 
-
 = From WordPress.org =
 
 1. Download and unzip `hidelinks.zip`
@@ -86,9 +89,11 @@ If there is still a problem after deactivating plugins, it means that error can 
 1. Activate HideLinks from your Plugins page.
 1. Visit *Posts* &rarr; *Add new* and find new button at visual editor
 
+
 == Screenshots ==
 
 1. HideLinks button in visual editor
+
 
 == Changelog ==
 
@@ -131,4 +136,3 @@ If there is still a problem after deactivating plugins, it means that error can 
 
 = 1.0 =
 * Release
-

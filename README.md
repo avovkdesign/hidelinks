@@ -20,7 +20,6 @@ FEATURES:
 * Simple shortcode [link][/link] easily hides any links in widgets or comments texts.
 
 
-
 ### USAGE 
 
 1. In text editor place cursor on link
@@ -75,15 +74,12 @@ If there is still a problem after deactivating plugins, it means that error can 
 
 ## Installation 
 
-
 ### From your WordPress dashboard 
 
 1. Visit *Plugins* &larr; *Add new*
 1. Search for `Hide Links` and click *Install* button on HideLinks plugin
 1. Activate HideLinks from your *Plugins* page.
 1. Visit *Posts* &larr; *Add new* and find new button at visual editor
-
-
 
 ### From WordPress.org 
 
@@ -97,7 +93,6 @@ If there is still a problem after deactivating plugins, it means that error can 
 
 ### 1. HideLinks button in visual editor
 [missing image]
-
 
 
 ## Changelog 
@@ -116,36 +111,28 @@ If there is still a problem after deactivating plugins, it means that error can 
 * Tested up to WordPress 4.9
 * add: `rel=noopener` by default
 
-
 ### 1.2 
 * Tested up to WordPress 4.8
 * Fix: problem with shortcode setup, when link is in begin or end of paragraph
 * Add: do shortcodes in link text
 * Add: Localization
 
-
 ### 1.1 
 * Added: visual editor button with which you can easily add or remove shortcode around link.
-
 
 ### 1.0.4 
 * Added: secure comment for script (in script)
 * Added: commentator’s link replacement  which is displayed via get_comment_author_url_link
 
-
 ### 1.0.3 
 * Added: saving class attribute in script replacement, if there is any, for link
 
-
 ### 1.0.2 
 * Fixed: error with class setting for link of author’s comment
-
 
 ### 1.0.1 
 * Fixed: fatal error with setting class for tag span with picture inside
 * Now in comment text and text widget you can use shortcode [link][/link] to close links, adding it around html – code of standard hyperlink
 
-
 ### 1.0 
 * Release
-
